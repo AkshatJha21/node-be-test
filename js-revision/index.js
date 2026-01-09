@@ -102,3 +102,66 @@ console.log(nums.copyWithin(1, 0, 2));
 
 const arr2d = [[1,2], [2,3], [3,4]];
 console.log(arr2d.flat());
+
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 1, "Chiku", "Anaar");
+fruits.splice(0, 1);
+console.log(fruits);
+
+console.log(fruits.slice(0, fruits.length - 1));
+
+const phal = ["Banana", "Orange", "Apple", "Mango", "Apple"];
+console.log(phal.indexOf("Apple") + 1);
+console.log(phal.lastIndexOf("Apple") + 1);
+console.log(phal.includes("Mango"))
+
+console.log(numss2.find(isEven));
+console.log(numss2.findIndex(isEven));
+console.log(numss2.findLast(isEven));
+console.log(numss2.findLastIndex(isEven));
+
+const isMax = (arr) => {
+    return Math.max.apply(null, arr);
+}
+const isMin = (arr) => {
+    return Math.min.apply(null, arr);
+}
+
+console.log(isMax(numss));
+console.log(isMin(numss));
+console.log(numss.map(v => v * 2));
+console.log(numss.filter(isEven));
+console.log(numss.reduce((n, total = 0) => n + total));
+console.log(numss.every(n => n > 10));
+console.log(numss.some(n => n > 10));
+const mynum = Array.from(numss2, x => x * 2);
+console.log(mynum);
+const f = fruits.entries();
+for (let x of f) {
+    console.log("I ate ", x[0]);
+}
+console.log([...numss, ...numss2]);
+
+// sets
+const letters = new Set();
+letters.add('a');
+letters.add('b');
+letters.add('c');
+letters.add('c');
+letters.add('d');
+letters.add('d');
+
+console.log(letters);
+console.log(typeof letters);
+
+for (const x of letters) {
+    console.log(x);
+}
+console.log(letters.size)
+console.log(letters.has("c"));
+console.log(letters.has("e"));
+
+let text = "";
+for (const x of letters.keys()) {
+  text += x;
+}
