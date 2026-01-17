@@ -1,20 +1,5 @@
 import pool from "../config/db.js";
 
-export const createUser = async (req, res, next) => {
-    try {
-        const { name, email, age } = req.body;
-        const result = await pool.query(
-            `INSERT INTO users (name, email, age)
-            VALUES ($1, $2, $3)
-            RETURNING *`,
-            [name, email, age]
-        );
-        res.status(201).json(result.rows[0]);
-    } catch (error) {
-        next(error);
-    }
-};
-
 export const getAllUsers = async (req, res, next) => {
     try {
         const result = await pool.query("SELECT * FROM users");
