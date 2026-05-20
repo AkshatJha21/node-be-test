@@ -65,3 +65,67 @@ for (let i = 0; i < objArr.length; i++) {
     }
 }
 
+function sumIt(n1, n2, fnToCall) {
+    let result = n1+n2;
+    fnToCall(result);
+}
+
+function displayResult(data) {
+    console.log("Result of the sum is", data);
+}
+
+function displayPassiveResult(data) {
+    console.log("Sum's result is", data);
+}
+
+sumIt(1, 2, displayPassiveResult);
+
+function findIndexOf(str, target) {
+    console.log("Original string:", str);
+    console.log("Index:", str.indexOf(target));
+    console.log("Last Index:", str.lastIndexOf(target));
+}
+function sliceIt(str, start, end) {
+    console.log("Original string:", str);
+    console.log("After slice:", str.slice(start, end))
+}
+findIndexOf("Hello World World", "World");
+sliceIt("Hello World", 0, 7);
+
+const str = "hellow world";
+console.log(str.replace("hellow", "hey"));
+
+const value = "hi i am a robot";
+const words = value.split(" ");
+console.log(words);
+
+const val = "   aj is hungry ";
+console.log(val.trim());
+console.log(val.toLowerCase());
+
+console.log(parseInt("42"));
+console.log(parseInt("42px"));
+console.log(parseInt("4.21"));
+console.log(parseFloat("42"));
+console.log(parseFloat("42px"));
+console.log(parseFloat("4.21"));
+
+const initialArr = [1, 2, 3];
+const secondArr = [4, 5, 6];
+initialArr.push(5);
+console.log(initialArr);
+initialArr.pop();
+console.log(initialArr);
+initialArr.shift();
+console.log(initialArr);
+initialArr.unshift(1);
+console.log(initialArr);
+const finalArr = initialArr.concat(secondArr);
+console.log(finalArr);
+
+function logThing(str) {
+    console.log(str);
+}
+finalArr.forEach(logThing);
+
+
