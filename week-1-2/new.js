@@ -16,7 +16,12 @@ class Animal {
     speak() {
         console.log(this.name, "says", this.speaks);
     }
+    static myType() {
+        console.log("Animal");
+    }
 }
 
 let cat = new Animal("cat", 4, "meow meow"); // create object
 cat.speak(); // method
+
+Animal.myType();
