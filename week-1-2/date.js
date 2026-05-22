@@ -22,3 +22,12 @@ const after = new Date();
 const afterTimeMs = after.getTime();
 
 console.log(afterTimeMs - beforeTimeMs);
+
+function showTimer() {
+    const now = new Date();
+    const h = now.getHours();
+    const m = now.getMinutes();
+    const s = now.getSeconds();
+    console.log(`${h}:${m}:${s}`);
+}
+setInterval(showTimer, 1000);
