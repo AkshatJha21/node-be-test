@@ -16,6 +16,7 @@ console.log("hello");
 const fs = require("fs");
 
 function readMyFile() {
+    console.log('Wait for file read...');
     return new Promise(function(resolve) {
         fs.readFile("a.txt", "utf-8", (err, data) => {
             resolve(data);
@@ -23,9 +24,11 @@ function readMyFile() {
     });
 }
 
+console.log('Before onDone');
 async function onDone() {
     let value = await readMyFile();
     console.log(value);
 }
 
 onDone();
+console.log('After onDone');
